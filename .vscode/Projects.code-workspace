@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"path": "/mnt/c/Users/91967/Desktop/Projects"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"*.c": "c",
+			"iostream": "cpp",
+			"xstring": "c",
+			"xutility": "c"
+		}
+	}
+}

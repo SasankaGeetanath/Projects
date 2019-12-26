@@ -1,0 +1,51 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "CC",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-g",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}",
+                "${file}"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "CR",
+            "type": "shell",
+            "command": "${fileDirname}/${fileBasenameNoExtension}"
+        },
+        {
+            "label": "JC",
+            "command": "/usr/bin/javac",
+            // "command": "javac",
+            // "windows": {
+            //     "command": "C:\\Program Files (x86)\\Java\\jdk1.8.0_211\\bin\\javac.exe"
+            // },
+            "args": [
+                "${file}"
+            ]
+        },
+        {
+            "label": "JR",
+            "command": "/usr/bin/java",
+
+            // "command": "java",
+            // "windows": {
+            //     "command": "C:\\Program Files (x86)\\Java\\jdk1.8.0_211\\bin\\java.exe"
+            // },
+            "args": [
+                "-cp",
+                "${fileDirname}",
+                "${fileBasenameNoExtension}",
+            ],
+            "group": "build"
+        },
+    ]
+}

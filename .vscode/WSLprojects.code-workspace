@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "C:/Users/91967/Desktop/Projects"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"*.c": "c",
+			"typeinfo": "cpp"
+		}
+	}
+}

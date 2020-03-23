@@ -17,6 +17,7 @@ void Merge( int *arr, int *left, int *right, int N, int TotalLeft, int TotalRigh
 
 void MergeSort( int *arr, int N ){
     int mid;
+    
     if( N < 2)
         return;
 

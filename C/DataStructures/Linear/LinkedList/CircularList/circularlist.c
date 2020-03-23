@@ -4,7 +4,7 @@
 struct Node{
     int data;
     struct Node* next;
-} *start = NULL;
+}*start = NULL;
 
 typedef struct Node* node;
 
@@ -98,7 +98,7 @@ void delete_at_start(){
 void delete_by_position(int pos){
     node ptr = start;
     node pre_ptr = NULL;
-    int i = 0;
+    int i = 1;
     while( size-- ){
         if( i == pos)
             break;

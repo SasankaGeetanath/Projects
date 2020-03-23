@@ -26,7 +26,7 @@ void insert( int value ){
     }
 }
 
-void delete(){
+void deQueue(){
     node ptr = start;
     if( isEmpty() )
         printf("THE QUEUE LIST IS EMPTY.");
@@ -52,7 +52,7 @@ int search( int value){
     node ptr = start;
     while( ptr != NULL ){
         if( ptr == value ){
-            search_var =1;
+            search_var = 1;
             break;
         }
         else
@@ -93,7 +93,7 @@ int main(){
             case 2 :    if( isEmpty() )
                             printf("THE QUEUE IS EMPTY...CAN'T DELETE ANY ELEMENT.");
                         else
-                            delete();
+                            deQueue();
             break;
 
             case 3 :    if( isEmpty() )

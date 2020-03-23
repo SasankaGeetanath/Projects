@@ -2,8 +2,8 @@
 #include<stdlib.h>
 
 void BubbleSort( int *arr, int N ){
-    for ( int i = 0; i < N; i++ ){
-        for( int j = 1; j < N; j++ )
+    for ( int i = 0; i < N - 1; ++i ){
+        for( int j = 1; j < N; ++j )
             if( arr[j] < arr[j - 1] ){
                 int temp = arr[j];
                 arr[j] = arr[j - 1];
@@ -30,6 +30,7 @@ int main(){
     for( int i = 0; i < N; i++ )
         printf("->%d\t", arr[i]);
 
-free(arr);
-return 0;
+    free(arr);
+
+    return 0;
 }

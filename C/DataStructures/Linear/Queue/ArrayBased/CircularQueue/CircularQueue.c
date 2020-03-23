@@ -9,7 +9,7 @@ int isEmpty(){
 }
 
 int isFull(){
-    if( rear == MAX ){
+    if( rear == MAX ) {
         if( front == rear )
             return 1;
         return 0;
@@ -19,15 +19,21 @@ int isFull(){
 }
 
 void insert( int value ){
-    if( isEmpty() )
-        front = rear = -1;
-    else if( front != 0 && isFull() )
+    if( isEmpty() ) {
+        front = rear = 0;
+        queue[rear] = value;
+    }
+
+    else if( front != 0 && rear == MAX ) {
         rear = 0;
-    queue[rear] = value;
+        queue[rear] = value;
+    }
+    else 
+        queue[rear] = value;
     rear++;
 }
 
-void delete(){
+void deQueue() {
     printf("THE DELETED ELEMENT IS %d", queue[front]);
     front++;
 }
@@ -35,13 +41,13 @@ void delete(){
 void display(){
     if( front < rear ){
         for( int i = front; i < rear; i++ )
-            printf("%d", queue[i]);
+            printf("->%d\t", queue[i]);
     }
     else{
         for( int i = front; i < MAX - 1; i++)
-            printf("%d", queue[i]);
+            printf("->%d\t", queue[i]);
         for( int i = 0; i < rear; i++ )
-            printf("%d", queue[i]);
+            printf("->%d\t", queue[i]);
     }
 }
 
@@ -66,14 +72,16 @@ int search( int value ){
 int main(){
     int input, choice;
     while(1){
-        printf("CIRCULAR QUEUE");
-        printf("1.ENTER TO INSERT INTO CIRCULAR QUEUE.");
-        printf("2.ENTER TO DELETE AN ELEMENT FROM THE CIRCULAR QUEUE.");
-        printf("3.ENTER TO DISPLAY ALL THE ELEMENTS IN THE CIRCULAR QUEUE.");
-        printf("4.ENTER TO FIND THE SIZE OF THE CIRCULAR QUEUE.");
-        printf("5.ENTER TO SEARCH FOR AN ELEMENT.");
-        printf("6.EXIT.");
-        printf("ENTER YOUR CHOICE :");
+        printf("\n\n\tCIRCULAR QUEUE\t\n\n");
+        printf("\n1.ENTER TO INSERT INTO CIRCULAR QUEUE.");
+        printf("\n2.ENTER TO DELETE AN ELEMENT FROM THE CIRCULAR QUEUE.");
+        printf("\n3.ENTER TO DISPLAY ALL THE ELEMENTS IN THE CIRCULAR QUEUE.");
+        printf("\n4.ENTER TO CHECK WHETHER THE QUEUE IS EMPTY OR NOT.");
+        printf("\n5.ENTER TO CHECK WHETHER THE QUEUE IS FULL OR NOT.");
+        printf("\n6.ENTER TO CHECK THE SIZE OF THE QUEUE.");
+        printf("\n7.ENTER TO SEARCH FOR AN ELEMENT IN THE CIRCULAR QUEUE.");
+        printf("\n8.EXIT");
+        printf("\n\nENTER YOUR CHOICE :");
         scanf("%d", &choice);
 
         switch( choice ){
@@ -86,7 +94,7 @@ int main(){
             case 2 :    if( isEmpty() )
                             printf("THE CIRCULAR QUEUE IS EMPTY.");
                         else 
-                            delete();
+                            deQueue();
             break;
 
             case 3 :    if( isEmpty() )

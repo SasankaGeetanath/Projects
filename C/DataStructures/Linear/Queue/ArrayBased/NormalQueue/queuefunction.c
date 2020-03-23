@@ -9,7 +9,7 @@ int isEmpty(){
 }
 
 int isFull(){
-    if(rear == MAX){
+    if(rear == MAX - 1){
         if(rear == front)
             return 0;
         return 1;
@@ -23,7 +23,7 @@ void insert( int x ){
         rear++;
 }
 
-void delete(){
+void deQueue(){
     printf("THE ELEMENT DELETED IS %d", queue[front] );
     front++;    
 }
@@ -54,7 +54,7 @@ int search( int x ){
 int main(){
     int choice, input;
     while(1){
-        printf("\n\n\tQUEUE MENU\t\n\n");
+        printf("\n\n\tQUEUE\t\n\n");
         printf("\n1.ENTER AN ELEMENT TO INSERT.");
         printf("\n2.ENTER AN ELEMENT TO DELETE.");
         printf("\n3.DISPLAY ALL ELEMENTS.");
@@ -69,7 +69,7 @@ int main(){
         switch( choice ){
 
             case 1 :    if( isFull() )
-                            printf("THE QUEUE IS FULl.");
+                            printf("THE QUEUE IS FULL.");
                         else{
                             printf("ENTER THE ELEMENT TO BE INSERTED :");
                             scanf("%d", &input);
@@ -80,7 +80,7 @@ int main(){
             case 2 :    if(isEmpty() )
                             printf("THERE ARE NO ELEMENT IN THE QUEUE.");
                         else
-                            delete();
+                            deQueue();
             break;
 
             case 3 :    if( isEmpty() )

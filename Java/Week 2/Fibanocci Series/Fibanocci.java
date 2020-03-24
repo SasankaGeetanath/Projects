@@ -11,10 +11,10 @@ public class Fibanocci{
 		System.out.print("\n\nENTER YOUR CHOICE : ");
 		switch (scan.nextInt()) {
 			case 1:     System.out.println("\nTHE " + N + "TH" + " FABINOCCI NUMBER IS \n" + Fab(N));
-			break;
+						break;
 
 			case 2:     System.out.println("\nTHE " + N + "TH" + " FABINOCCI NUMBER IS \n" + RFab(N));
-			break;
+						break;
 		}
 		scan.close();
 	}

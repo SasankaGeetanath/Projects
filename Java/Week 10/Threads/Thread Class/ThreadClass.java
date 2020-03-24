@@ -13,7 +13,7 @@ class Hello extends Thread {
     public void run() {
         while( true ) {
             System.out.println("HELLO");      
-            try {Thread.sleep(2000); }  catch ( Exception e ) { }
+            try {Thread.sleep(2000); }  catch ( Exception e ) {}
         } 
     }
 }
@@ -23,7 +23,7 @@ class Welcome extends Thread {
     public void run() {
         while( true ) {
             System.out.println("WELCOME!");      
-            try {Thread.sleep(3000); }  catch ( Exception e ) { }
+            try {Thread.sleep(3000); }  catch ( Exception e ) {}
         } 
     }
 }
@@ -38,9 +38,9 @@ public class ThreadClass {
 		t1.start();
 		try { Thread.sleep(1000); } catch( Exception e ) {}
 		t2.start();
-		try {Thread.sleep(2000); }  catch ( Exception e ) { }
+		try {Thread.sleep(2000); }  catch ( Exception e ) {}
 		t3.start();
-        try {Thread.sleep(3000); }  catch ( Exception e ) { }
+        try {Thread.sleep(3000); }  catch ( Exception e ) {}
 
 	}
 }

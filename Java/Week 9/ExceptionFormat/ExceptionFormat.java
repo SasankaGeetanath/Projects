@@ -15,6 +15,6 @@ public class ExceptionFormat {
         else if ( M == 0 )
             throw new ArithmeticException("CANT DIVIDE WITH ZERO.");
         else 
-            System.out.println( "THE VALUE IS " + N/M );
+            System.out.println( "THE QUOTIENT IS " + N/M );
     }
 }

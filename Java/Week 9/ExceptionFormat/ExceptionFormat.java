@@ -11,7 +11,7 @@ public class ExceptionFormat {
         scan.close();
 
         if (N - N.intValue() != 0.0 || M - M.intValue() != 0.0)
-            throw new NumberFormatException("The data types of the numbers aren't integers.");
+            throw new NumberFormatException("THE NUMBERS AREN'T INTEGERS.");
         else if ( M == 0 )
             throw new ArithmeticException("CANT DIVIDE WITH ZERO.");
         else 
